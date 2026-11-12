@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="470" viewBox="0 0 1100 470" role="img" aria-label="Comparación del MAE reportado en el Congreso Mexicano del Petróleo 2019">
+<rect width="1100" height="470" fill="#0B1220"/>
+<g font-family="Arial,Helvetica,sans-serif"><text x="45" y="54" font-size="28" fill="#FFFFFF">Comparación del MAE reportado — CMP 2019</text><text x="45" y="85" font-size="18" fill="#C8F4F2">Menor es mejor · valores de la figura 7</text>
+<text x="45" y="143" font-size="19" fill="#E4EDF6">Gradient Boosting</text><rect x="280" y="117" width="539" height="36" rx="5" fill="#087F8C"/><text x="829" y="143" font-size="18" fill="#FFFFFF">20.417</text>
+<text x="45" y="207" font-size="19" fill="#E4EDF6">Random Forest</text><rect x="280" y="181" width="569" height="36" rx="5" fill="#087F8C"/><text x="859" y="207" font-size="18" fill="#FFFFFF">21.553</text>
+<text x="45" y="271" font-size="19" fill="#E4EDF6">OLS</text><rect x="280" y="245" width="613" height="36" rx="5" fill="#406077"/><text x="903" y="271" font-size="18" fill="#FFFFFF">23.231</text>
+<text x="45" y="335" font-size="19" fill="#E4EDF6">Decision Tree</text><rect x="280" y="309" width="622" height="36" rx="5" fill="#406077"/><text x="912" y="335" font-size="18" fill="#FFFFFF">23.573</text>
+<text x="45" y="399" font-size="19" fill="#E4EDF6">Ridge</text><rect x="280" y="373" width="627" height="36" rx="5" fill="#406077"/><text x="917" y="399" font-size="18" fill="#FFFFFF">23.770</text>
+<text x="45" y="454" font-size="15" fill="#ADC5D4">Datos reportados; agregación por variable no especificada.</text></g></svg>
