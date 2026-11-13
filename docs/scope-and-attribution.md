@@ -1,26 +1,27 @@
-# Mi participación, autoría y alcance público
+# Mi participación y autoría
 
-## Mi función en el proyecto
+## Mi participación
 
-Durante el desarrollo me desempeñé como **Gerente Técnico de Plenumsoft Energy & Sustainability** y participé como **coautor** del trabajo presentado en el **Congreso Mexicano del Petróleo de 2019**.
+Durante mi etapa como **Gerente Técnico de Plenumsoft Energy & Sustainability**, participé en un trabajo de investigación sobre el pronóstico de calidad de crudo pesado mediante **Machine Learning**.
 
-Comparto esta experiencia como parte de mi trayectoria de gestión técnica e innovación aplicada al sector industrial.
+El estudio se desarrolló con especialistas de **PEMEX Exploración y Producción** y **Plenumsoft**. Participé como **coautor del artículo presentado en el Congreso Mexicano del Petróleo 2019**.
 
-El artículo no desglosa qué persona implementó cada modelo o componente; por esa razón, distingo mi función de Gerente Técnico y coautor del trabajo colectivo del desarrollo específico de los algoritmos.
+Mi contribución se desarrolló en el ámbito de la **gerencia técnica y la investigación del equipo**. El diseño de los experimentos y la implementación de modelos fueron parte de un esfuerzo multidisciplinario, sin atribuir individualmente a una sola persona todo el desarrollo.
 
 ## Autoría del artículo CMP2019_207
 
-- **Autor:** Bruno Pecero García — PEMEX Exploración y Producción.
-- **Coautores:** Felipe Pacheco Rosado, Minerva Rojas Solís, Yahvé Isaías Solís Aranda, Raúl López Altamirano y Gabriel Azuela Barajas — Plenumsoft Energy & Sustainability.
+**Autor principal:** Bruno Pecero García — PEMEX Exploración y Producción.
 
-## Alcance de lo publicado
+**Coautores:** Felipe Pacheco Rosado, Minerva Rojas Solís, Yahvé Isaías Solís Aranda, Raúl López Altamirano y Gabriel Azuela Barajas — Plenumsoft Energy & Sustainability.
 
-Esta documentación resume un **trabajo de investigación y prueba de concepto** presentado públicamente. No incluyo información histórica no divulgada, registros operativos privados, código propietario, credenciales, modelos entrenados ni infraestructura interna.
+## El proyecto
 
-La gráfica de este repositorio fue elaborada a partir de resultados numéricos de la figura 7 de la memoria técnica.
+El trabajo evaluó cinco modelos de regresión utilizando **12 meses de datos históricos** sobre variables relacionadas con la calidad del crudo pesado en procesos de deshidratación y desalado.
 
-## Estado del proyecto
+La comparación se realizó mediante **MAE**, con resultados presentados como parte de una **prueba de concepto**.
 
-La publicación histórica demuestra un estudio de factibilidad, pero no acredita un despliegue en producción ni un resultado económico comercial. Cualquier reconstrucción técnica posterior requeriría datos y validaciones nuevos.
+[Consultar metodología y resultados](methodology-and-results.md).
 
-Las marcas y materiales originales conservan los derechos de sus titulares.
+## Sobre la publicación
+
+Este repositorio recoge mi participación y los resultados de la investigación presentada en **CMP2019_207**, sin distribuir los registros operativos, el código fuente ni los modelos originales.
