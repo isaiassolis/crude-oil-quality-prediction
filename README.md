@@ -10,19 +10,19 @@
 
 ### Prueba de concepto orientada a apoyar decisiones operativas durante la deshidratación y el desalado de crudo en la Terminal Marítima Dos Bocas.
 
-**Plenumsoft Energy & Sustainability · Congreso Mexicano del Petróleo 2019 · Trabajo CMP2019_207**
+**Plenumsoft Energy & Sustainability · Congreso Mexicano del Petróleo 2019**
 
 En 2019 participé, como **Gerente Técnico de Plenumsoft Energy & Sustainability**, en un proyecto de inteligencia artificial aplicada a la industria energética: pronosticar características del crudo pesado durante su acondicionamiento para apoyar el cumplimiento de las especificaciones comprometidas en su comercialización.
 
 El trabajo fue una colaboración entre personal de **PEMEX Exploración y Producción** y **Plenumsoft**. Fui **coautor del artículo técnico** presentado en el Congreso Mexicano del Petróleo. En este repositorio comparto el enfoque y los resultados publicados de la prueba de concepto, sin incluir datos operativos, modelos entrenados ni código propietario.
 
-## 🎯 El problema
+## El problema
 
 Para comercializar crudo pesado es necesario cumplir parámetros de calidad, entre ellos los **grados API, la concentración de agua y el contenido de sal**. El comportamiento de estas variables depende de las condiciones del proceso y su incumplimiento puede tener consecuencias contractuales.
 
 Nuestro reto consistía en **utilizar registros históricos para anticipar estas variables** y ofrecer información útil a quienes toman decisiones operativas.
 
-## 🧠 Nuestra prueba de concepto
+## Nuestra prueba de concepto
 
 Trabajamos con **12 meses de datos históricos** y seguimos un proceso de selección de variables, limpieza y acondicionamiento de datos, entrenamiento de modelos y comparación de pronósticos.
 
@@ -38,7 +38,7 @@ Trabajamos con **12 meses de datos históricos** y seguimos un proceso de selecc
 | Ordinary Least Squares (OLS) | Modelo lineal de referencia |
 | Ridge Regression | Modelo lineal regularizado |
 
-## 📊 Resultados presentados en el congreso
+## Resultados presentados en el congreso
 
 ![Comparación de MAE de cinco modelos](assets/model-comparison.svg)
 
@@ -48,7 +48,7 @@ Los valores proceden de la **figura 7 del artículo CMP2019_207**. No se indica 
 
 > **Alcance:** el estudio documentó resultados de una **prueba de concepto**. No afirmo que estos modelos se hayan desplegado en producción ni que se hayan evitado penalizaciones reales mediante su utilización.
 
-## 🔄 Metodología
+## Metodología
 
 ```mermaid
 flowchart LR
@@ -60,7 +60,7 @@ flowchart LR
   F --> G[Comparación de pronósticos]
 ```
 
-## 👤 Mi participación
+## Mi participación
 
 Participé desde la **Gerencia Técnica de Plenumsoft Energy & Sustainability** y como **coautor del trabajo**. El proyecto reunió conocimientos del proceso industrial, manejo de datos históricos y aprendizaje automático, junto con especialistas de PEMEX y Plenumsoft.
 
@@ -68,7 +68,7 @@ El artículo acredita como **autor a Bruno Pecero García** (PEMEX Exploración 
 
 El carácter colectivo del trabajo es importante: no atribuyo exclusivamente a mi persona el desarrollo de cada algoritmo.
 
-## 📚 Documentación
+## Documentación
 
 - [Metodología y resultados](docs/methodology-and-results.md)
 - [Mi participación, autoría y alcance público](docs/scope-and-attribution.md)
