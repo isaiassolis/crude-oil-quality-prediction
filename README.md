@@ -8,45 +8,55 @@
 
 # Pronóstico de calidad de crudo pesado mediante Machine Learning
 
-### Prueba de concepto orientada a apoyar decisiones operativas durante la deshidratación y el desalado de crudo en la Terminal Marítima Dos Bocas.
+**Gerencia técnica · Inteligencia artificial industrial · Congreso Mexicano del Petróleo 2019**
 
-**Plenumsoft Energy & Sustainability · Congreso Mexicano del Petróleo 2019**
+Durante mi etapa como **Gerente Técnico de Plenumsoft Energy & Sustainability**, participé en un proyecto de investigación aplicada para **pronosticar parámetros de calidad del crudo pesado** durante los procesos de deshidratación y desalado en la **Terminal Marítima Dos Bocas**.
 
-En 2019 participé, como **Gerente Técnico de Plenumsoft Energy & Sustainability**, en un proyecto de inteligencia artificial aplicada a la industria energética: pronosticar características del crudo pesado durante su acondicionamiento para apoyar el cumplimiento de las especificaciones comprometidas en su comercialización.
+El trabajo reunió a especialistas de **PEMEX Exploración y Producción** y **Plenumsoft**, y participé como **coautor del artículo técnico presentado en el Congreso Mexicano del Petróleo 2019**.
 
-El trabajo fue una colaboración entre personal de **PEMEX Exploración y Producción** y **Plenumsoft**. Fui **coautor del artículo técnico** presentado en el Congreso Mexicano del Petróleo. En este repositorio comparto el enfoque y los resultados publicados de la prueba de concepto, sin incluir datos operativos, modelos entrenados ni código propietario.
+Desarrollamos una **prueba de concepto** para explorar cómo los modelos de aprendizaje automático podían aprovechar datos históricos y apoyar decisiones relacionadas con el acondicionamiento del crudo.
 
-## El problema
+## El desafío
 
-Para comercializar crudo pesado es necesario cumplir parámetros de calidad, entre ellos los **grados API, la concentración de agua y el contenido de sal**. El comportamiento de estas variables depende de las condiciones del proceso y su incumplimiento puede tener consecuencias contractuales.
+La comercialización de crudo pesado exige atender parámetros de calidad como los **grados API, el contenido de agua y la concentración de sal**.
 
-Nuestro reto consistía en **utilizar registros históricos para anticipar estas variables** y ofrecer información útil a quienes toman decisiones operativas.
+Nuestro objetivo fue investigar si podíamos **anticipar el comportamiento de esas variables** a partir de registros históricos de operación y comparar distintas técnicas predictivas para identificar las más prometedoras.
 
-## Nuestra prueba de concepto
+## La prueba de concepto
 
-Trabajamos con **12 meses de datos históricos** y seguimos un proceso de selección de variables, limpieza y acondicionamiento de datos, entrenamiento de modelos y comparación de pronósticos.
+Trabajamos con **12 meses de información histórica** de dos líneas de proceso. Entre las variables estudiadas estaban los grados API, agua libre, emulsión y sal, además de información relacionada con volúmenes e inyección de crudo.
 
-**Entradas estudiadas:** grados API, agua libre, emulsión y sal de dos líneas de proceso, además de datos de volumen e inyección de crudo considerados en el artículo.
+El trabajo comprendió preparación de datos, selección de variables, entrenamiento de modelos y comparación de pronósticos.
 
-**Evaluación reportada:** **80 % de los registros para entrenamiento** y **20 % para prueba**, utilizando **error absoluto medio (MAE)** como medida de comparación.
+Evaluamos cinco enfoques:
 
-| Modelo evaluado | Enfoque |
+| Modelo | Tipo |
 | :--- | :--- |
-| Decision Tree | Árbol de regresión |
+| **Decision Tree** | Árbol de regresión |
 | **Random Forest** | Ensamble de árboles |
-| **Gradient Boosted Trees** | Ensamble secuencial |
-| Ordinary Least Squares (OLS) | Modelo lineal de referencia |
-| Ridge Regression | Modelo lineal regularizado |
+| **Gradient Boosted Trees** | Ensamble secuencial de árboles |
+| **Ordinary Least Squares (OLS)** | Regresión lineal |
+| **Ridge Regression** | Regresión lineal regularizada |
 
-## Resultados presentados en el congreso
+La evaluación descrita en el trabajo utilizó una **partición 80 % / 20 %** entre entrenamiento y prueba, y el **error absoluto medio (MAE)** para comparar resultados.
 
-![Comparación de MAE de cinco modelos](assets/model-comparison.svg)
+## Resultados
 
-Los valores proceden de la **figura 7 del artículo CMP2019_207**. No se indica con suficiente detalle cómo se agregaron las distintas variables objetivo; por eso se presentan como resultados publicados y no como métricas reproducidas en este repositorio.
+![Comparación de MAE entre los cinco modelos evaluados](assets/model-comparison.svg)
 
-**Gradient Boosted Trees y Random Forest** registraron los menores errores entre los cinco enfoques. El trabajo compara además las curvas pronosticadas y observadas para **grados API, porcentaje de agua y sal**, con diferencias apreciables especialmente en la variable sal.
+En la comparación presentada en el congreso, **Gradient Boosted Trees** y **Random Forest** obtuvieron los menores valores de error entre los modelos analizados.
 
-> **Alcance:** el estudio documentó resultados de una **prueba de concepto**. No afirmo que estos modelos se hayan desplegado en producción ni que se hayan evitado penalizaciones reales mediante su utilización.
+| Modelo | MAE presentado |
+| :--- | ---: |
+| **Gradient Boosted Trees** | **20.417** |
+| **Random Forest** | **21.553** |
+| Ordinary Least Squares | 23.231 |
+| Decision Tree | 23.573 |
+| Ridge Regression | 23.770 |
+
+Los valores corresponden a la comparación global mostrada en la figura 7 del artículo técnico; no representan una única variable de calidad con unidades específicas.
+
+También comparamos visualmente pronósticos y valores observados de **grados API, agua y sal**. La variable sal presentó diferencias más marcadas, un resultado relevante para identificar oportunidades de mejora del enfoque predictivo.
 
 ## Metodología
 
@@ -56,25 +66,37 @@ flowchart LR
   B --> C[Cinco modelos supervisados]
   C --> D[Entrenamiento 80%]
   D --> E[Prueba 20%]
-  E --> F[Evaluación con MAE]
+  E --> F[Evaluación MAE]
   F --> G[Comparación de pronósticos]
 ```
 
+[Consultar la metodología y los resultados](docs/methodology-and-results.md).
+
 ## Mi participación
 
-Participé desde la **Gerencia Técnica de Plenumsoft Energy & Sustainability** y como **coautor del trabajo**. El proyecto reunió conocimientos del proceso industrial, manejo de datos históricos y aprendizaje automático, junto con especialistas de PEMEX y Plenumsoft.
+Participé desde la **Gerencia Técnica de Plenumsoft** y como **coautor** de la investigación.
 
-El artículo acredita como **autor a Bruno Pecero García** (PEMEX Exploración y Producción), y como **coautores a Felipe Pacheco Rosado, Minerva Rojas Solís, Yahvé Isaías Solís Aranda, Raúl López Altamirano y Gabriel Azuela Barajas** (Plenumsoft).
+El proyecto combinó conocimientos del proceso industrial, preparación y análisis de datos y técnicas de aprendizaje automático. Mi participación se desarrolló dentro de un equipo multidisciplinario de especialistas de PEMEX y Plenumsoft.
 
-El carácter colectivo del trabajo es importante: no atribuyo exclusivamente a mi persona el desarrollo de cada algoritmo.
+Esta experiencia forma parte de mi trayectoria en **dirección tecnológica, investigación industrial y aplicación de inteligencia artificial a problemas operativos**.
 
-## Documentación
+## Presentación en el Congreso Mexicano del Petróleo
 
-- [Metodología y resultados](docs/methodology-and-results.md)
-- [Mi participación, autoría y alcance público](docs/scope-and-attribution.md)
+El estudio se presentó en junio de **2019** con el título:
 
-**Fuente principal:** *CMP2019_207 — Simulador de los procesos de deshidratación y desalado del crudo pesado para cumplir con las especificaciones comprometidas en la fase de comercialización de hidrocarburos y derivados*. Congreso Mexicano del Petróleo, junio de 2019.
+**«Simulador de los procesos de deshidratación y desalado del crudo pesado para cumplir con las especificaciones comprometidas en la fase de comercialización de hidrocarburos y derivados» (CMP2019_207).**
+
+**Autor:** Bruno Pecero García — PEMEX Exploración y Producción.
+
+**Coautores:** Felipe Pacheco Rosado, Minerva Rojas Solís, Yahvé Isaías Solís Aranda, Raúl López Altamirano y Gabriel Azuela Barajas — Plenumsoft Energy & Sustainability.
+
+[Conocer mi participación y la autoría del proyecto](docs/scope-and-attribution.md).
+
+## Sobre el proyecto
+
+El desarrollo fue una **prueba de concepto de investigación**, no una implementación comercial del modelo predictivo. Este repositorio presenta el trabajo y los resultados de la investigación sin publicar los datos operativos ni el software propietario.
 
 ---
-<p align="center"><strong>Aplicar el análisis predictivo a decisiones operativas reales.</strong></p>
-<p align="center">Caso de estudio profesional de <a href="https://github.com/isaiassolis">Isaías Solís</a></p>
+
+<p align="center"><strong>Aprendizaje automático aplicado a la ingeniería y a la toma de decisiones industriales.</strong></p>
+<p align="center"><a href="https://github.com/isaiassolis">Volver a mi portafolio profesional</a></p>
